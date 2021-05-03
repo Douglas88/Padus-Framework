@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+#SHELL_FOLDER=$(cd "$(dirname "$0")";pwd)
+SHELL_FOLDER=$(env | grep struts2 | sed 's/struts2poc=//')
+#echo $SHELL_FOLDER
+
+
+#RUN
+#python3 $SHELL_FOLDER/struts2-032.py  <url>:<port>   #CVE-2016-3081
+python3 $SHELL_FOLDER/struts2-045.py <url>:<port> #CVE-2017-5638
